@@ -1,0 +1,759 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>For Your Birthday ♡</title>
+
+    <!-- GOOGLE FONT -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link
+        rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossorigin
+    >
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Montserrat:wght@300;400;500;600&display=swap"
+        rel="stylesheet"
+    >
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+
+<body>
+
+
+<!-- =====================================================
+     PASSWORD SCREEN
+===================================================== -->
+
+<section id="passwordScreen" class="screen active">
+
+    <div class="password-card">
+
+        <div class="lock">
+            🔐
+        </div>
+
+        <p class="small-title">
+            A LITTLE SECRET
+        </p>
+
+        <h1>
+            Something Special
+            <br>
+            Is Waiting For You
+        </h1>
+
+        <p class="subtitle">
+            Masukkan password untuk membuka
+            hadiah ini.
+        </p>
+
+        <div class="password-box">
+
+            <input
+                type="password"
+                id="passwordInput"
+                placeholder="Password"
+                maxlength="20"
+            >
+
+            <button onclick="checkPassword()">
+                Buka
+            </button>
+
+        </div>
+
+        <p id="passwordError"></p>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     GIFT SCREEN
+===================================================== -->
+
+<section id="giftScreen" class="screen">
+
+    <div class="gift-content">
+
+        <p class="small-title">
+            YOU HAVE A GIFT
+        </p>
+
+        <h1>
+            A Special Gift
+            <br>
+            For Someone Special
+        </h1>
+
+
+        <div
+            class="gift-box"
+            onclick="openGift()"
+        >
+
+            <div class="gift-lid"></div>
+
+            <div class="gift-body"></div>
+
+            <div class="gift-ribbon vertical"></div>
+
+            <div class="gift-ribbon horizontal"></div>
+
+            <div class="gift-bow left"></div>
+
+            <div class="gift-bow right"></div>
+
+        </div>
+
+
+        <p class="click-text">
+            Klik kotak hadiah untuk membuka
+        </p>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     MAIN WEBSITE
+===================================================== -->
+
+<main id="mainSite">
+
+
+    <!-- MUSIC -->
+
+    <audio
+        id="backgroundMusic"
+        loop
+    >
+
+        <source
+            src="music/music.mp3"
+            type="audio/mpeg"
+        >
+
+    </audio>
+
+
+    <!-- MUSIC BUTTON -->
+
+    <button
+        id="musicButton"
+        class="music-button"
+        onclick="toggleMusic()"
+    >
+        ♫
+    </button>
+
+
+
+    <!-- =================================================
+         SLIDER
+    ================================================== -->
+
+    <div
+        class="slider"
+        id="slider"
+    >
+
+
+
+        <!-- =================================================
+             SLIDE 1 — COVER
+        ================================================== -->
+
+        <section class="slide hero-slide">
+
+            <div class="hero-content">
+
+                <p class="small-title">
+                    A LITTLE MESSAGE FOR YOU
+                </p>
+
+                <h1>
+                    Happy
+                    <br>
+
+                    <span>
+                        Birthday
+                    </span>
+                </h1>
+
+                <div class="gold-line"></div>
+
+                <p>
+                    Hari ini adalah hari spesial,
+                    karena seseorang yang luar biasa
+                    sedang bertambah satu tahun lagi.
+                </p>
+
+                <button
+                    class="next-button"
+                    onclick="nextSlide()"
+                >
+                    Mulai Perjalanan →
+                </button>
+
+            </div>
+
+
+            <div class="hero-decoration">
+                ✦
+            </div>
+
+        </section>
+
+
+
+        <!-- =================================================
+             SLIDE 2 — LETTER
+        ================================================== -->
+
+        <section class="slide">
+
+            <div class="letter-container">
+
+                <p class="small-title">
+                    DEAR YOU
+                </p>
+
+                <h2>
+                    Sebuah Surat Kecil
+                </h2>
+
+
+                <div class="letter-paper">
+
+                    <div class="rose">
+                        🌹
+                    </div>
+
+
+                    <p>
+                        Hari ini bukan hanya tentang
+                        bertambahnya usia, tetapi juga
+                        tentang semua cerita, pengalaman,
+                        dan perjalanan yang sudah kamu
+                        lewati.
+                    </p>
+
+
+                    <p>
+                        Semoga di tahun yang baru ini,
+                        semakin banyak hal baik yang
+                        datang dalam hidupmu.
+                    </p>
+
+
+                    <p>
+                        Jangan berhenti bermimpi,
+                        jangan berhenti tersenyum,
+                        dan tetaplah menjadi dirimu
+                        sendiri.
+                    </p>
+
+
+                    <div class="signature">
+
+                        With love,
+                        <br>
+
+                        <strong>
+                            Someone who cares about you ♡
+                        </strong>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =================================================
+             SLIDE 3 — MOMENTS
+        ================================================== -->
+
+        <section class="slide">
+
+            <div class="timeline-container">
+
+                <p class="small-title">
+                    OUR LITTLE STORY
+                </p>
+
+                <h2>
+                    Some Beautiful Moments
+                </h2>
+
+
+                <div class="timeline">
+
+
+
+                    <!-- MOMENT 1 -->
+
+                    <div class="timeline-item">
+
+                        <div class="timeline-dot"></div>
+
+
+                        <div class="timeline-photo">
+
+                            <img
+                                src="images/foto6.jpg"
+                                alt="Momen pertama"
+                            >
+
+                        </div>
+
+
+                        <div class="timeline-content">
+
+                            <span>
+                                01
+                            </span>
+
+                            <h3>
+                                First Moment
+                            </h3>
+
+                            <p>
+                                Semua cerita besar
+                                selalu dimulai dari
+                                sebuah momen kecil.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <!-- MOMENT 2 -->
+
+                    <div class="timeline-item">
+
+                        <div class="timeline-dot"></div>
+
+
+                        <div class="timeline-photo">
+
+                            <img
+                                src="images/foto7.jpg"
+                                alt="Kenangan indah"
+                            >
+
+                        </div>
+
+
+                        <div class="timeline-content">
+
+                            <span>
+                                02
+                            </span>
+
+                            <h3>
+                                Beautiful Memories
+                            </h3>
+
+                            <p>
+                                Ada banyak momen sederhana
+                                yang ternyata menjadi
+                                kenangan berharga.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <!-- MOMENT 3 -->
+
+                    <div class="timeline-item">
+
+                        <div class="timeline-dot"></div>
+
+
+                        <div class="timeline-photo">
+
+                            <img
+                                src="images/foto8.jpg"
+                                alt="Momen hari ini"
+                            >
+
+                        </div>
+
+
+                        <div class="timeline-content">
+
+                            <span>
+                                03
+                            </span>
+
+                            <h3>
+                                Today
+                            </h3>
+
+                            <p>
+                                Dan hari ini menjadi salah
+                                satu halaman baru dalam
+                                perjalananmu.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =================================================
+             SLIDE 4 — GALLERY
+        ================================================== -->
+
+        <section class="slide">
+
+            <div class="gallery-container">
+
+                <p class="small-title">
+                    OUR MEMORIES
+                </p>
+
+                <h2>
+                    Little Moments
+                </h2>
+
+                <p class="gallery-description">
+                    Beberapa kenangan yang
+                    tidak ingin dilupakan.
+                </p>
+
+
+                <div class="gallery">
+
+
+                    <!-- FOTO 1 -->
+
+                    <div
+                        class="photo photo-large"
+                        onclick="openLightbox('images/foto1.jpg')"
+                    >
+
+                        <img
+                            src="images/foto1.jpg"
+                            alt="Foto 1"
+                        >
+
+                        <div class="photo-overlay">
+                            <span>♡</span>
+                        </div>
+
+                    </div>
+
+
+
+                    <!-- FOTO 2 -->
+
+                    <div
+                        class="photo"
+                        onclick="openLightbox('images/foto2.jpg')"
+                    >
+
+                        <img
+                            src="images/foto2.jpg"
+                            alt="Foto 2"
+                        >
+
+                        <div class="photo-overlay">
+                            <span>♡</span>
+                        </div>
+
+                    </div>
+
+
+
+                    <!-- FOTO 3 -->
+
+                    <div
+                        class="photo"
+                        onclick="openLightbox('images/foto3.jpg')"
+                    >
+
+                        <img
+                            src="images/foto3.jpg"
+                            alt="Foto 3"
+                        >
+
+                        <div class="photo-overlay">
+                            <span>♡</span>
+                        </div>
+
+                    </div>
+
+
+
+                    <!-- FOTO 4 -->
+
+                    <div
+                        class="photo"
+                        onclick="openLightbox('images/foto4.jpg')"
+                    >
+
+                        <img
+                            src="images/foto4.jpg"
+                            alt="Foto 4"
+                        >
+
+                        <div class="photo-overlay">
+                            <span>♡</span>
+                        </div>
+
+                    </div>
+
+
+
+                    <!-- FOTO 5 -->
+
+                    <div
+                        class="photo"
+                        onclick="openLightbox('images/foto5.jpg')"
+                    >
+
+                        <img
+                            src="images/foto5.jpg"
+                            alt="Foto 5"
+                        >
+
+                        <div class="photo-overlay">
+                            <span>♡</span>
+                        </div>
+
+                    </div>
+
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =================================================
+             SLIDE 5 — BIRTHDAY
+        ================================================== -->
+
+        <section class="slide birthday-slide">
+
+            <div class="birthday-content">
+
+                <div class="birthday-number">
+                    17
+                </div>
+
+                <p class="small-title">
+                    ANOTHER BEAUTIFUL YEAR
+                </p>
+
+                <h2>
+                    May Your New Chapter
+                    <br>
+                    Be Full Of Happiness
+                </h2>
+
+                <div class="gold-line"></div>
+
+                <p>
+                    Semoga setiap langkahmu membawa
+                    kamu semakin dekat dengan impianmu.
+                </p>
+
+                <p>
+                    Semoga hari-harimu dipenuhi
+                    dengan kebahagiaan, orang-orang baik,
+                    dan banyak alasan untuk tersenyum.
+                </p>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =================================================
+             SLIDE 6 — FINAL
+        ================================================== -->
+
+        <section class="slide final-slide">
+
+            <div class="final-content">
+
+                <div class="heart">
+                    ♡
+                </div>
+
+                <p class="small-title">
+                    ONE LAST THING
+                </p>
+
+                <h2>
+                    Happy Birthday
+                </h2>
+
+
+                <p class="final-message">
+                    Terima kasih sudah menjadi bagian
+                    dari cerita yang indah.
+                </p>
+
+
+                <p class="final-message">
+                    Semoga semua doa baik yang kamu
+                    panjatkan perlahan menemukan jalannya.
+                </p>
+
+
+                <div class="final-line"></div>
+
+
+                <h3>
+                    Enjoy your special day.
+                </h3>
+
+
+                <p class="ending">
+                    With love &nbsp; ♡
+                </p>
+
+            </div>
+
+        </section>
+
+
+    </div>
+
+
+
+    <!-- =================================================
+         NAVIGATION
+    ================================================== -->
+
+    <button
+        class="nav-arrow left-arrow"
+        onclick="prevSlide()"
+    >
+        ‹
+    </button>
+
+
+    <button
+        class="nav-arrow right-arrow"
+        onclick="nextSlide()"
+    >
+        ›
+    </button>
+
+
+
+    <!-- DOTS -->
+
+    <div class="dots">
+
+        <span
+            class="dot active"
+            onclick="goToSlide(0)"
+        ></span>
+
+        <span
+            class="dot"
+            onclick="goToSlide(1)"
+        ></span>
+
+        <span
+            class="dot"
+            onclick="goToSlide(2)"
+        ></span>
+
+        <span
+            class="dot"
+            onclick="goToSlide(3)"
+        ></span>
+
+        <span
+            class="dot"
+            onclick="goToSlide(4)"
+        ></span>
+
+        <span
+            class="dot"
+            onclick="goToSlide(5)"
+        ></span>
+
+    </div>
+
+
+</main>
+
+
+
+<!-- =====================================================
+     LIGHTBOX FOTO
+===================================================== -->
+
+<div
+    id="lightbox"
+    class="lightbox"
+    onclick="closeLightbox()"
+>
+
+    <button class="close-lightbox">
+        ×
+    </button>
+
+
+    <img
+        id="lightboxImage"
+        src=""
+        alt="Preview foto"
+    >
+
+</div>
+
+
+
+<!-- JAVASCRIPT -->
+
+<script src="script.js"></script>
+
+</body>
+
+</html>
